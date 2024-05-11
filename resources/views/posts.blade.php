@@ -4,24 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Blog</title>
-    <link rel="stylesheet" href="/app.css"> 
-   
+    <link rel="stylesheet" href="/app.css">
+
 </head>
 <body>
+    <?php foreach ($posts as $post) : ?>
     <article>
-        <h1><a href="/posts/my-first-post"> My first post</a></h1>
-        <p>
-           Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, illo delectus reprehenderit corrupti qui rem? Minima rem ipsum nihil aliquam dicta mollitia, consequatur iste vel dolore illum quam modi laboriosam nesciunt eos quaerat et recusandae fuga deleniti reprehenderit sequi odit ea. Recusandae doloremque accusantium, voluptas quam ullam incidunt qui sint! Nesciunt dicta labore natus porro deleniti, enim aspernatur officia eligendi rem sit, at, reprehenderit asperiores? Dicta exercitationem et nobis explicabo iusto aliquam dolor, soluta maiores natus, enim quidem cupiditate autem laborum quo sint at sunt, hic magnam! Nam necessitatibus iure
+        <h1>
+                <a href="/posts/<?= $post->slug ?>">
+                   <?= $post->title; ?>
+                </a>
+
+        </h1>
+
+
+        <div>
+            <?= $post->excerpt; ?>
+        </div>
+
     </article>
-    <article>
-        <h1><a href="/posts/my-second-post">My second post</a></h1>
-        <p>
-           Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, illo delectus reprehenderit corrupti qui rem? Minima rem ipsum nihil aliquam dicta mollitia, consequatur iste vel dolore illum quam modi laboriosam nesciunt eos quaerat et recusandae fuga deleniti reprehenderit sequi odit ea. Recusandae doloremque accusantium, voluptas quam ullam incidunt qui sint! Nesciunt dicta labore natus porro deleniti, enim aspernatur officia eligendi rem sit, at, reprehenderit asperiores? Dicta exercitationem et nobis explicabo iusto aliquam dolor, soluta maiores natus, enim quidem cupiditate autem laborum quo sint at sunt, hic magnam! Nam necessitatibus iure 
-    </article>
-    <article>
-        <h1><a href="/posts/my-third-post">My third post</a></h1>
-        <p>
-           Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, illo delectus reprehenderit corrupti qui rem? Minima rem ipsum nihil aliquam dicta mollitia, consequatur iste vel dolore illum quam modi laboriosam nesciunt eos quaerat et recusandae fuga deleniti reprehenderit sequi odit ea. Recusandae doloremque accusantium, voluptas quam ullam incidunt qui sint! Nesciunt dicta labore natus porro deleniti, enim aspernatur officia eligendi rem sit, at, reprehenderit asperiores? Dicta exercitationem et nobis explicabo iusto aliquam dolor, soluta maiores natus, enim quidem cupiditate autem laborum quo sint at sunt, hic magnam! Nam necessitatibus iure 
-    </article>
+    <?php endforeach; ?>
 </body>
 </html>
