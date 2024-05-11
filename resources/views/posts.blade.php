@@ -9,17 +9,17 @@
 </head>
 <body>
     <article>
-        <h1><a href="/post"> My first post</a></h1>
+        <h1><a href="/posts/my-first-post"> My first post</a></h1>
         <p>
            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, illo delectus reprehenderit corrupti qui rem? Minima rem ipsum nihil aliquam dicta mollitia, consequatur iste vel dolore illum quam modi laboriosam nesciunt eos quaerat et recusandae fuga deleniti reprehenderit sequi odit ea. Recusandae doloremque accusantium, voluptas quam ullam incidunt qui sint! Nesciunt dicta labore natus porro deleniti, enim aspernatur officia eligendi rem sit, at, reprehenderit asperiores? Dicta exercitationem et nobis explicabo iusto aliquam dolor, soluta maiores natus, enim quidem cupiditate autem laborum quo sint at sunt, hic magnam! Nam necessitatibus iure
     </article>
     <article>
-        <h1><a href="/post">My second post</a></h1>
+        <h1><a href="/posts/my-second-post">My second post</a></h1>
         <p>
            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, illo delectus reprehenderit corrupti qui rem? Minima rem ipsum nihil aliquam dicta mollitia, consequatur iste vel dolore illum quam modi laboriosam nesciunt eos quaerat et recusandae fuga deleniti reprehenderit sequi odit ea. Recusandae doloremque accusantium, voluptas quam ullam incidunt qui sint! Nesciunt dicta labore natus porro deleniti, enim aspernatur officia eligendi rem sit, at, reprehenderit asperiores? Dicta exercitationem et nobis explicabo iusto aliquam dolor, soluta maiores natus, enim quidem cupiditate autem laborum quo sint at sunt, hic magnam! Nam necessitatibus iure 
     </article>
     <article>
-        <h1><a href="/post">My third post</a></h1>
+        <h1><a href="/posts/my-third-post">My third post</a></h1>
         <p>
            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, illo delectus reprehenderit corrupti qui rem? Minima rem ipsum nihil aliquam dicta mollitia, consequatur iste vel dolore illum quam modi laboriosam nesciunt eos quaerat et recusandae fuga deleniti reprehenderit sequi odit ea. Recusandae doloremque accusantium, voluptas quam ullam incidunt qui sint! Nesciunt dicta labore natus porro deleniti, enim aspernatur officia eligendi rem sit, at, reprehenderit asperiores? Dicta exercitationem et nobis explicabo iusto aliquam dolor, soluta maiores natus, enim quidem cupiditate autem laborum quo sint at sunt, hic magnam! Nam necessitatibus iure 
     </article>
