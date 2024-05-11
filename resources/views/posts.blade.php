@@ -5,31 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Blog</title>
     <link rel="stylesheet" href="/app.css">
-
 </head>
 <body>
-    @unless(true)
-
-    @endunless
-
-
-
     @foreach ($posts as $post)
 
-    <article class="{{ $loop->even ? 'foobar' : '' }}">
-        <h1>
+        <article>
+            <h1>
                 <a href="/posts/{{ $post->slug }}">
-                   {{ $post->title }}
+                    {{ $post->title }}
                 </a>
 
-        </h1>
+            </h1>
 
 
-        <div>
-            {{ $post->excerpt }}
-        </div>
+            <div>
+                {{ $post->excerpt }}
+            </div>
 
-    </article>
-    @endforeach
+        </article>
+        @endforeach
+
 </body>
 </html>
+
