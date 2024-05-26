@@ -12,22 +12,8 @@
             <div class="space-y-2 lg:space-y-0 lg:space-x-4 mt-8">
                 <!--  Trigger -->
                 <div class="relative flex lg:inline-flex items-center bg-gray-100 rounded-xl">
+                    <x-category-dropdown></x-category-dropdown>
 
-                    <div x-data="{show:false}" class="py-2" @click.away="show = false" >
-                        <button
-                            @click="show = ! show"
-                            class="py-2 pl-3 pr-9 text-sm font-semibold">Categories
-                        </button>
-                        {{isset($currentCategory) ? ucwords($currentCategory->name) : 'Categories'}}
-
-                        <div x-show="show" style-display:none class="overflow-auto max-h-52" >
-                            @foreach($categories as $category)
-                                <a href="/categories/{{ $category->slug }}" class="block hover:bg-gray-300 " >
-                                    {{ ucwords($category->name) }} </a>
-
-                            @endforeach
-                        </div>
-                    </div>
 
                 </div>
 
