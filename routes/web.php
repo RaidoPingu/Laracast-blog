@@ -4,6 +4,7 @@ use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\RegisterController;
 
 
 Route::get('/', [PostsController::class, 'index'])->name('home');
@@ -28,3 +29,6 @@ Route::get('authors/{author:username}', function(User $author){
         'categories' => Category::all()
     ]);
 });
+
+Route::get('register', [RegisterController::class, 'create']);
+Route::post('register', [RegisterController::class, 'store']);
