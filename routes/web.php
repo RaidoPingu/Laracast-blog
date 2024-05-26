@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SessionController;
 use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Support\Facades\Route;
@@ -30,5 +31,10 @@ Route::get('authors/{author:username}', function(User $author){
     ]);
 });
 
-Route::get('register', [RegisterController::class, 'create']);
-Route::post('register', [RegisterController::class, 'store']);
+Route::get('register', [RegisterController::class, 'create'])->middleware('guest');
+Route::post('register', [RegisterController::class, 'store'])->middleware('guest');
+
+Route::get('login', [SessionController::class, 'create'])->middleware('guest');
+Route::post('sessions', [SessionController::class, 'create'])->middleware('guest');
+
+Route::post('logout', [SessionController::class, 'destroy'])->middleware('auth');
