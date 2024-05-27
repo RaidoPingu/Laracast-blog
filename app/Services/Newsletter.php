@@ -2,8 +2,17 @@
 
 namespace App\Services;
 
+use MailchimpMarketing\ApiClient;
+
+
+
 class Newsletter
 {
+
+    public function __construct(protected ApiClient $client)
+    {
+
+    }
     public function subscribe(string $email, string $list = null)
     {
 
@@ -19,7 +28,7 @@ class Newsletter
     {
         $mailchimp = new \MailchimpMarketing\ApiClient();
 
-        return $mailchimp->setConfig([
+        return $this->client->setConfig([
             'apiKey' => config('services.mailchimp.key'),
             'server' => 'YOUR_SERVER_PREFIX'
         ]);
