@@ -77,6 +77,14 @@
                                    class="lg:bg-transparent pl-4 focus-within:outline-none">
                         </div>
 
+                        <section class="col-span-8 col-start-5 mt-10 space-y-6">
+                            <x-post-comment />
+                            <x-post-comment />
+                            <x-post-comment />
+                            <x-post-comment />
+                            <x-post-comment />
+                        </section>
+
                         <button type="submit"
                                 class="transition-colors duration-300 bg-blue-500 hover:bg-blue-600 mt-4 lg:mt-0 lg:ml-3 rounded-full text-xs font-semibold text-white uppercase py-3 px-8">
                             Subscribe
