@@ -6,6 +6,7 @@ use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\PostCommentController;
 
 
 Route::get('/', [PostsController::class, 'index'])->name('home');
@@ -23,6 +24,8 @@ Route::get('categories/{category:slug}', function(Category $category){
 
     ]);
 })->name('category');
+
+Route::post('posts/{post:slug}/comments', [PostCommentController::class, 'storeComment']);
 
 Route::get('authors/{author:username}', function(User $author){
     return view('posts', [
