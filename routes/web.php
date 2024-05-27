@@ -9,6 +9,24 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\PostCommentController;
 
 
+Route::get('ping', function(){
+
+
+    $mailchimp = new \MailchimpMarketing\ApiClient();
+
+    $mailchimp->setConfig([
+        'apiKey' => config('services.mailchimp.key'),
+        'server' => 'YOUR_SERVER_PREFIX'
+    ]);
+
+    $response = $mailchimp->lists->addListMember('', [
+        'email_address' => config('services.mailchimp.email'),
+        'status'        => 'subscribed'
+    ]);
+    print_r($response);
+});
+
+
 Route::get('/', [PostsController::class, 'index'])->name('home');
 
 Route::get('posts/{post:slug}', function(Post $post){
