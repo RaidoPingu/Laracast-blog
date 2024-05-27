@@ -9,7 +9,9 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\PostCommentController;
 
 
-Route::get('ping', function(){
+
+Route::post('newsletter', function(){
+    request()->validate(['email' => 'required|email']);
 
 
     $mailchimp = new \MailchimpMarketing\ApiClient();
@@ -19,11 +21,20 @@ Route::get('ping', function(){
         'server' => 'YOUR_SERVER_PREFIX'
     ]);
 
-    $response = $mailchimp->lists->addListMember('', [
-        'email_address' => config('services.mailchimp.email'),
-        'status'        => 'subscribed'
-    ]);
-    print_r($response);
+    try {
+        $response = $mailchimp->lists->addListMember('', [
+            'email_address' => request('email'),
+            'status' => 'subscribed'
+        ]);
+    } catch (\Exception $e) {
+        throw \Illuminate\Validation\ValidationException::withMessages([
+            'email' => 'This email could not be added to our newletter list.'
+        ]);
+    }
+
+
+
+    return redirect('/')->with('success', 'You are now subscribed to our newsletter!') ;
 });
 
 
